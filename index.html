@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sapharali — сантехника, радиаторы, печи</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#f3f4f5;--ink:#1b1d1f;--mute:#6b7075;--green:#1fa44a;--greenD:#168038;--line:#e4e6e8;--bar:#16181a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14161a;--soft:#1e2126;--ink:#f1f2f3;--mute:#9aa0a6;--line:#2c3036;--bar:#0b0c0e}}
+:root[data-theme="dark"]{--bg:#14161a;--soft:#1e2126;--ink:#f1f2f3;--mute:#9aa0a6;--line:#2c3036;--bar:#0b0c0e}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.bar{background:var(--bar);color:#d7dadd;font-size:13px}
+.bar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.bar b{background:var(--green);color:#fff;padding:2px 10px;border-radius:4px;font-weight:600}
+header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:22px;height:64px}
+.logo{font-weight:800;font-size:24px;letter-spacing:-.5px}
+.logo i{font-style:normal;color:var(--green)}
+nav{display:flex;gap:22px;font-size:15px;font-weight:500;margin-left:8px}
+nav a:hover{color:var(--green)}
+.tel{margin-left:auto;font-weight:700;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 22px;font-weight:700;font-size:15px;border:0;cursor:pointer;font-family:inherit}
+.btn.g{background:var(--green);color:#fff}.btn.g:hover{background:var(--greenD)}
+.btn.w{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+.btn.w:hover{border-color:var(--green)}
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:24px}
+.main{position:relative;min-height:360px;border-radius:20px;padding:36px;overflow:hidden;background:linear-gradient(135deg,#e9f6ee 0%,#cfe9d9 55%,#b7dcc6 100%);display:flex;align-items:flex-start}
+.main .card{background:rgba(255,255,255,.9);color:#1b1d1f;border-radius:16px;padding:26px;max-width:340px;backdrop-filter:blur(6px)}
+.main h1{margin:0 0 10px;font-size:28px;line-height:1.15;letter-spacing:-.5px}
+.main p{margin:0 0 18px;color:#555}
+.main svg.deco{position:absolute;right:-30px;bottom:-30px;width:320px;opacity:.9}
+.side{display:grid;gap:16px}
+.mini{background:var(--soft);border-radius:20px;padding:22px;position:relative;overflow:hidden;min-height:170px}
+.mini h3{margin:0 0 6px;font-size:18px}.mini p{margin:0;color:var(--mute);font-size:14px;max-width:150px}
+.mini svg{position:absolute;right:-10px;bottom:-10px;width:120px;color:var(--green);opacity:.25}
+h2{font-size:30px;letter-spacing:-.6px;margin:0 0 6px;text-align:center}
+.sub{text-align:center;color:var(--mute);margin:0 0 28px}
+section{padding:64px 0 0}
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cat{background:var(--soft);border-radius:20px;overflow:hidden;display:block;transition:transform .2s}
+.cat:hover{transform:translateY(-3px)}
+.cat .pic{height:190px;display:grid;place-items:center;background:linear-gradient(160deg,#eef7f1,#d5ecde);color:var(--green)}
+.cat .pic svg{width:92px;height:92px}
+.cat div.t{padding:18px 20px 22px}
+.cat h3{margin:0 0 4px;font-size:18px}.cat p{margin:0;color:var(--mute);font-size:14px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.why div{border:1px solid var(--line);border-radius:16px;padding:20px}
+.why b{display:block;margin-bottom:4px}.why span{color:var(--mute);font-size:14px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.box{background:var(--soft);border-radius:20px;padding:28px}
+.box h3{margin:0 0 6px;font-size:22px}.box p{margin:0 0 18px;color:var(--mute)}
+.chan{display:grid;gap:10px}
+.chan a{display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:14px;background:var(--bg);border:1px solid var(--line);font-weight:600}
+.chan a:hover{border-color:var(--green)}
+.chan small{display:block;color:var(--mute);font-weight:500}
+.ic{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;flex:none}
+.ic svg{width:19px;height:19px}
+form{display:grid;gap:12px}
+input,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:13px 16px;width:100%}
+textarea{min-height:90px;resize:vertical}
+footer{margin-top:72px;background:var(--bar);color:#aeb3b8;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:26px;padding-bottom:26px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:10px;z-index:6}
+.fab a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.fab svg{width:26px;height:26px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none}.lang button{border:0;background:none;color:var(--ink);font:inherit;font-weight:700;font-size:13px;padding:7px 12px;cursor:pointer}.lang button.on{background:var(--green);color:#fff}
+.park{display:flex;align-items:center;gap:20px;background:var(--soft);border-radius:20px;padding:26px 28px;flex-wrap:wrap}.pk-ic{width:56px;height:56px;border-radius:16px;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:800;font-size:30px;flex:none}.park h3{margin:0 0 2px;font-size:22px}.park p{margin:0;color:var(--mute)}.park .btn{margin-left:auto}
+.mapcard{display:block;position:relative;margin-top:16px;height:230px;border-radius:20px;overflow:hidden;background:linear-gradient(90deg,transparent 48%,rgba(255,255,255,.95) 48% 53%,transparent 53%),linear-gradient(0deg,transparent 58%,rgba(255,255,255,.95) 58% 63%,transparent 63%),repeating-linear-gradient(90deg,transparent 0 96px,rgba(255,255,255,.65) 96px 99px),repeating-linear-gradient(0deg,transparent 0 72px,rgba(255,255,255,.65) 72px 75px),#d9e6de;border:1px solid var(--line)}
+.mapcard .pin{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:var(--green);color:#fff;border:4px solid #fff;display:grid;place-items:center;font-weight:800;font-size:28px;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.mapcard .cap{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:#fff;color:#1b1d1f;padding:9px 18px;border-radius:999px;font-weight:700;font-size:14px;text-align:center;max-width:92%;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.mapcard:hover .cap{background:var(--green);color:#fff}
+@media(max-width:860px){nav{display:none}.hero,.contact{grid-template-columns:1fr}.cats{grid-template-columns:1fr}.why{grid-template-columns:1fr 1fr}.main svg.deco{width:220px}.main{padding:20px;min-height:320px}.bar .wrap span:first-child{display:none}}
+@media(max-width:520px){.tel{font-size:14px}.why{grid-template-columns:1fr}.main h1{font-size:23px}h2{font-size:25px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="bar"><div class="wrap"><span>Сантехника и отопление</span><span><b>Звоните и пишите — подскажем и подберём</b></span></div></div>
+<header class="top"><div class="wrap">
+<a class="logo" href="#top">Sapha<i>rali</i></a>
+<nav><a href="#catalog">Что у нас есть</a><a href="#why">Почему мы</a><a href="#contacts">Контакты</a></nav>
+<a class="tel" href="tel:+77083553859">8 708 355 38 59</a>
+<div class="lang" role="group" aria-label="Язык / Тіл"><button type="button" data-l="ru" class="on">RU</button><button type="button" data-l="kk">ҚАЗ</button><button type="button" data-l="en">EN</button></div>
+</div></header>
+
+<main id="top" class="wrap">
+<div class="hero">
+ <div class="main">
+  <div class="card">
+   <h1>Всё для отопления и сантехники</h1>
+   <p>Радиаторы, печи и комплектующие. Цену и наличие подскажем по звонку или в мессенджере.</p>
+   <a class="btn g" href="#contacts">Узнать подробнее</a>
+  </div>
+  <svg class="deco" viewBox="0 0 200 200" fill="none" stroke="#1fa44a" stroke-width="5" stroke-linecap="round" aria-hidden="true"><rect x="20" y="50" width="160" height="110" rx="14" fill="#fff" fill-opacity=".6"/><path d="M50 65v80M80 65v80M110 65v80M140 65v80"/><path d="M20 80H5M20 130H5M180 80h15M180 130h15"/></svg>
+ </div>
+ <div class="side">
+  <div class="mini"><h3>Подбор радиатора</h3><p>Расскажите про комнату — посоветуем.</p><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6"><rect x="10" y="25" width="80" height="50" rx="8"/><path d="M30 32v36M50 32v36M70 32v36"/></svg></div>
+  <div class="mini"><h3>Нужна печь?</h3><p>Поможем выбрать под ваш дом.</p><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6"><rect x="20" y="30" width="60" height="55" rx="6"/><path d="M40 85V60h20v25M35 30V12h30v18"/></svg></div>
+ </div>
+</div>
+
+<section id="catalog">
+ <h2>Что у нас есть</h2><p class="sub">Фото и цены добавим позже — а пока всё уточняйте напрямую</p>
+ <div class="cats">
+  <a class="cat" href="#contacts"><div class="pic"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><rect x="10" y="25" width="80" height="50" rx="8"/><path d="M28 32v36M42 32v36M56 32v36M72 32v36"/></svg></div><div class="t"><h3>Радиаторы и батареи</h3><p>Для квартир, домов и офисов</p></div></a>
+  <a class="cat" href="#contacts"><div class="pic"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="30" width="60" height="55" rx="6"/><path d="M40 85V60h20v25M35 30V12h30v18"/></svg></div><div class="t"><h3>Печи и котлы</h3><p>Отопление частного дома</p></div></a>
+  <a class="cat" href="#contacts"><div class="pic"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40h35v-15h20v15h25M45 40v35h-15M65 40v20"/><circle cx="65" cy="70" r="8"/></svg></div><div class="t"><h3>Сантехнические принадлежности</h3><p>Трубы, краны, фитинги и многое другое</p></div></a>
+ </div>
+</section>
+
+<section id="why">
+ <h2>Как мы работаем</h2><p class="sub">Просто и без лишних шагов</p>
+ <div class="why">
+  <div><b>Звонок или сообщение</b><span>Напишите, что нужно, — ответим по делу</span></div>
+  <div><b>Подбор под задачу</b><span>Подскажем, что подойдёт именно вам</span></div>
+  <div><b>Цена и наличие</b><span>Назовём актуальную цену в разговоре</span></div>
+  <div><b>Можно приехать</b><span>Адрес и маршрут — на карте 2ГИС</span></div>
+ </div>
+</section>
+
+<section id="parking"><div class="park"><div class="pk-ic" aria-hidden="true">P</div><div><h3>Удобная парковка для клиентов</h3><p>Бесплатная парковка для наших клиентов.</p></div><a class="btn g" href="https://go.2gis.com/vOj1k" target="_blank" rel="noopener">Смотреть на карте 2ГИС</a></div>
+<a class="mapcard" href="https://go.2gis.com/vOj1k" target="_blank" rel="noopener" aria-label="Parking — 2GIS"><span class="pin" aria-hidden="true">P</span><span class="cap">Нажмите, чтобы открыть карту и построить маршрут</span></a></section>
+
+<section id="contacts">
+ <h2>Свяжитесь с нами</h2><p class="sub">Выберите, как удобнее</p>
+ <div class="contact">
+  <div class="box">
+   <h3>Напишите или позвоните</h3><p>Ответим на вопросы и подскажем по цене.</p>
+   <div class="chan">
+    <a href="tel:+77083553859"><span class="ic" style="background:#1fa44a"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11 11 0 003.5.56 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.2 2.4.56 3.5a1 1 0 01-.25 1z"/></svg></span><span>Позвонить<small>8 708 355 38 59</small></span></a>
+    <a href="https://wa.me/77083553859" target="_blank" rel="noopener"><span class="ic" style="background:#25d366"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.2 14.2c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.3.400-.4.500c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.400z"/></svg></span><span>WhatsApp<small>Написать в чат</small></span></a>
+    <a href="https://t.me/+77083553859" target="_blank" rel="noopener"><span class="ic" style="background:#2aa3e0"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.500 3.500L2.800 10.800c-1 .4-1 1.100-.2 1.300l4.800 1.500 1.800 5.600c.2.600.4.800.9.800.4 0 .6-.2.900-.4l2.200-2.200 4.600 3.400c.8.500 1.500.2 1.700-.8L22.800 5c.3-1.200-.5-1.800-1.300-1.500zM8.500 13l9.700-6.100c.5-.3.900-.1.500.2L10.700 14l-.3 3.300z"/></svg></span><span>Telegram<small>Написать или попросить перезвонить</small></span></a>
+    <a href="https://go.2gis.com/axTyx" target="_blank" rel="noopener"><span class="ic" style="background:#168038"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.500A2.500 2.500 0 119.500 9 2.500 2.500 0 0112 11.500z"/></svg></span><span>Мы на 2ГИС<small>Адрес, маршрут и отзывы</small></span></a>
+   </div>
+  </div>
+  <div class="box">
+   <h3>Оставьте вопрос</h3><p>Нажмёте кнопку — откроется WhatsApp с готовым сообщением.</p>
+   <form id="f">
+    <input id="n" placeholder="Ваше имя" autocomplete="name">
+    <textarea id="q" placeholder="Что вас интересует? Например: радиатор на 20 м²"></textarea>
+    <button class="btn g" type="submit">Отправить в WhatsApp</button>
+   </form>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© Sapharali</span><span>Цены и наличие уточняйте по телефону 8 708 355 38 59</span></div></footer>
+
+<div class="fab">
+ <a href="https://wa.me/77083553859" target="_blank" rel="noopener" style="background:#25d366" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.2 14.2c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.3.400-.4.500c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.400z"/></svg></a>
+ <a href="tel:+77083553859" style="background:#1fa44a" aria-label="Позвонить"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11 11 0 003.5.56 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.2 2.4.56 3.5a1 1 0 01-.25 1z"/></svg></a>
+</div>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=document.getElementById('n').value.trim(),q=document.getElementById('q').value.trim();
+  var lg=document.documentElement.lang;var kk=lg==='kk';var t=lg==='en'?'Hello!'+(n?' My name is '+n+'.':'')+(q?' '+q:' I would like to know more about your products.'):kk?'Сәлеметсіз бе!'+(n?' Менің атым '+n+'.':'')+(q?' '+q:' Тауарлар туралы толығырақ білгім келеді.'):'Здравствуйте!'+(n?' Меня зовут '+n+'.':'')+(q?' '+q:' Хочу узнать подробнее о товарах.');
+  window.open('https://wa.me/77083553859?text='+encodeURIComponent(t),'_blank');
+});
+</script>
+<script>
+(function(){
+var K={'Сантехника и отопление':'Сантехника және жылыту','Звоните и пишите — подскажем и подберём':'Қоңырау шалыңыз немесе жазыңыз — кеңес береміз, таңдап береміз','Что у нас есть':'Бізде не бар','Почему мы':'Неге біз','Контакты':'Байланыс','Всё для отопления и сантехники':'Жылыту мен сантехникаға қажеттің бәрі','Радиаторы, печи и комплектующие. Цену и наличие подскажем по звонку или в мессенджере.':'Радиаторлар, пештер және жиынтықтаушылар. Бағасы мен барын қоңырау шалғанда немесе мессенджерде айтамыз.','Узнать подробнее':'Толығырақ білу','Подбор радиатора':'Радиатор таңдау','Расскажите про комнату — посоветуем.':'Бөлме туралы айтыңыз — кеңес береміз.','Нужна печь?':'Пеш керек пе?','Поможем выбрать под ваш дом.':'Үйіңізге лайық пешті таңдауға көмектесеміз.','Фото и цены добавим позже — а пока всё уточняйте напрямую':'Фото мен бағаны кейін қосамыз — әзірге бәрін тікелей сұраңыз','Радиаторы и батареи':'Радиаторлар мен батареялар','Для квартир, домов и офисов':'Пәтерлерге, үйлерге және кеңселерге','Печи и котлы':'Пештер мен қазандар','Отопление частного дома':'Жеке үйді жылыту','Сантехнические принадлежности':'Сантехникалық керек-жарақтар','Трубы, краны, фитинги и многое другое':'Құбырлар, крандар, фитингтер және т.б.','Как мы работаем':'Біз қалай жұмыс істейміз','Просто и без лишних шагов':'Қарапайым және артық қадамсыз','Звонок или сообщение':'Қоңырау немесе хабарлама','Напишите, что нужно, — ответим по делу':'Не керек екенін жазыңыз — нақты жауап береміз','Подбор под задачу':'Мақсатқа сай таңдау','Подскажем, что подойдёт именно вам':'Дәл сізге не сәйкес келетінін айтамыз','Цена и наличие':'Баға және қолда бары','Назовём актуальную цену в разговоре':'Нақты бағаны сөйлескенде айтамыз','Можно приехать':'Келуге болады','Адрес и маршрут — на карте 2ГИС':'Мекенжай мен бағыт — 2ГИС картасында','Удобная парковка для клиентов':'Клиенттерге ыңғайлы тұрақ','Бесплатная парковка для наших клиентов.':'Біздің клиенттерге арналған тегін тұрақ.','Смотреть на карте 2ГИС':'2ГИС картасында көру','Свяжитесь с нами':'Бізбен байланысыңыз','Выберите, как удобнее':'Өзіңізге ыңғайлы тәсілді таңдаңыз','Напишите или позвоните':'Жазыңыз немесе қоңырау шалыңыз','Ответим на вопросы и подскажем по цене.':'Сұрақтарға жауап беріп, баға туралы айтамыз.','Позвонить':'Қоңырау шалу','Написать в чат':'Чатқа жазу','Написать или попросить перезвонить':'Жазыңыз немесе қайта қоңырау шалуды сұраңыз','Мы на 2ГИС':'Біз 2ГИС-те','Адрес, маршрут и отзывы':'Мекенжай, бағыт және пікірлер','Оставьте вопрос':'Сұрағыңызды қалдырыңыз','Нажмёте кнопку — откроется WhatsApp с готовым сообщением.':'Батырманы басыңыз — WhatsApp дайын хабарламамен ашылады.','Отправить в WhatsApp':'WhatsApp-қа жіберу','Ваше имя':'Атыңыз','Что вас интересует? Например: радиатор на 20 м²':'Сізді не қызықтырады? Мысалы: 20 м² радиатор','Цены и наличие уточняйте по телефону 8 708 355 38 59':'Бағасы мен барын 8 708 355 38 59 телефоны арқылы нақтылаңыз'};
+var E={'Сантехника и отопление':'Plumbing and heating','Звоните и пишите — подскажем и подберём':'Call or message us — we’ll advise and help you choose','Что у нас есть':'What we offer','Почему мы':'Why us','Контакты':'Contacts','Всё для отопления и сантехники':'Everything for heating and plumbing','Радиаторы, печи и комплектующие. Цену и наличие подскажем по звонку или в мессенджере.':'Radiators, stoves and accessories. We’ll tell you the price and availability by phone or in a messenger.','Узнать подробнее':'Learn more','Подбор радиатора':'Choosing a radiator','Расскажите про комнату — посоветуем.':'Tell us about the room — we’ll advise.','Нужна печь?':'Need a stove?','Поможем выбрать под ваш дом.':'We’ll help you pick one for your home.','Фото и цены добавим позже — а пока всё уточняйте напрямую':'Photos and prices coming soon — for now, just ask us directly','Радиаторы и батареи':'Radiators and heaters','Для квартир, домов и офисов':'For apartments, houses and offices','Печи и котлы':'Stoves and boilers','Отопление частного дома':'Heating for a private home','Сантехнические принадлежности':'Plumbing accessories','Трубы, краны, фитинги и многое другое':'Pipes, taps, fittings and more','Как мы работаем':'How we work','Просто и без лишних шагов':'Simple, with no extra steps','Звонок или сообщение':'A call or a message','Напишите, что нужно, — ответим по делу':'Tell us what you need — we’ll answer to the point','Подбор под задачу':'Matched to your task','Подскажем, что подойдёт именно вам':'We’ll suggest what suits you best','Цена и наличие':'Price and availability','Назовём актуальную цену в разговоре':'We’ll give you the current price when we talk','Можно приехать':'Visit us','Адрес и маршрут — на карте 2ГИС':'Address and route — on the 2GIS map','Удобная парковка для клиентов':'Convenient parking for customers','Бесплатная парковка для наших клиентов.':'Free parking for our customers.','Смотреть на карте 2ГИС':'View on 2GIS map','Нажмите, чтобы открыть карту и построить маршрут':'Tap to open the map and get directions','Свяжитесь с нами':'Get in touch','Выберите, как удобнее':'Choose what works for you','Напишите или позвоните':'Message or call us','Ответим на вопросы и подскажем по цене.':'We’ll answer your questions and tell you the price.','Позвонить':'Call','Написать в чат':'Open chat','Написать или попросить перезвонить':'Message us or ask for a call back','Мы на 2ГИС':'We’re on 2GIS','Адрес, маршрут и отзывы':'Address, route and reviews','Оставьте вопрос':'Leave a question','Нажмёте кнопку — откроется WhatsApp с готовым сообщением.':'Press the button — WhatsApp will open with a ready message.','Отправить в WhatsApp':'Send via WhatsApp','Ваше имя':'Your name','Что вас интересует? Например: радиатор на 20 м²':'What are you looking for? E.g. a radiator for 20 m²','Цены и наличие уточняйте по телефону 8 708 355 38 59':'Please confirm prices and availability by phone: 8 708 355 38 59'};
+K['Нажмите, чтобы открыть карту и построить маршрут']='Картаны ашып, бағыт салу үшін басыңыз';
+var nodes=[],attrs=[],w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n;
+while(n=w.nextNode()){var s=n.nodeValue.trim();if(s&&K[s]&&n.parentNode.tagName!=='SCRIPT')nodes.push([n,s,n.nodeValue]);}
+document.querySelectorAll('[placeholder]').forEach(function(e){var s=e.getAttribute('placeholder');if(K[s])attrs.push([e,s]);});
+var T0=document.title,TK='Sapharali — сантехника, радиаторлар, пештер';
+function set(l){var kk=l==='kk';
+var D=l==='kk'?K:l==='en'?E:null;nodes.forEach(function(a){a[0].nodeValue=D?a[2].replace(a[1],D[a[1]]):a[2];});
+attrs.forEach(function(a){a[0].setAttribute('placeholder',D?D[a[1]]:a[1]);});
+document.documentElement.lang=l;document.title=kk?TK:l==='en'?'Sapharali — plumbing, radiators, stoves':T0;
+document.querySelectorAll('.lang button').forEach(function(b){b.classList.toggle('on',b.dataset.l===l);});
+try{localStorage.setItem('lang',l);}catch(e){}}
+document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){set(b.dataset.l);});});
+var s0='ru';try{s0=localStorage.getItem('lang')||'ru';}catch(e){}
+if(s0==='kk'||s0==='en')set(s0);
+})();
+</script>
+</body>
+</html>
